@@ -9,18 +9,27 @@
     <form method="POST" action="/registro">
 
         <label for="nombre"> NOMBRE DEL ESTUDIANTE:</label>
+        <br>
         <input type="text" name="nombre">
         <br>
+        <br>
         <label for="correo">CORREO DE ESTUDIANTE</label>
+        <br>
         <input type="email" name="correo">
+        
         <button type="ENVIAR"> ENVIAR </button>
 
 
 
 
-
-
     </form>
+    <h2> Listado de estudiantes</h2>
+    <ul>
+    {% for estudiante in listado %}
+     <li>{{ estudiante.nombre }} - {{ estudiante.correo }}</li>
+     {% endfor %}
+
+</ul>
 
 
 
